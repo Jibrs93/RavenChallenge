@@ -43,27 +43,6 @@ La app sigue una estética editorial oscura con los siguientes principios:
 - Masthead "THE NEW YORK TIMES" con selector de período por pestañas
 - Filas con imagen thumbnail, sección coloreada, título serif y metadata
 
-**Detalle del artículo**
-- Imagen hero a sangre completa (full-bleed) con `.ignoresSafeArea(edges: .top)`
-- Línea de fecha · fuente en tipografía monospaced
-- Badge de sección en rojo NYT (`#C41E3A`)
-- Título en serif 24pt bold
-- Fila de autor con avatar circular, nombre y publicación
-- Abstract en serif 16pt con interlineado amplio
-- Botón "Leer artículo completo" que abre `SFSafariViewController`
-
-**Paleta de colores**
-
-| Token | Hex | Uso |
-|-------|-----|-----|
-| `background` | `#0A0A0A` | Fondo principal |
-| `surface` | `#161616` | Superficies de tarjetas |
-| `surfaceElevated` | `#1E1E1E` | Avatares, chips |
-| `primaryText` | `#F0EDE6` | Titulares y cuerpo |
-| `secondaryText` | `#8A8A8A` | Metadata y bylines |
-| `accent` | `#C41E3A` | Rojo NYT — secciones, badges |
-| `divider` | `#2A2A2A` | Separadores |
-
 ---
 
 ## 🌐 API Utilizada
@@ -190,17 +169,6 @@ Se eligió **MVVM + Clean Architecture** por las siguientes razones:
 | `ArticleListViewModelTests` | Estado inicial · carga exitosa · error de red · fallback a caché · sin caché offline · cambio de período · retry |
 | `FetchMostPopularArticlesUseCaseTests` | Períodos válidos (1/7/30) · período inválido · propagación de errores · mapeo de resultados |
 | `RavenChallengeTests` | Helpers del entity (`cleanByline`, `sectionUppercased`, `formattedDate`) |
-
----
-
-## 🚀 Cómo ejecutar
-
-1. Clona el repositorio.
-2. Abre `RavenChallenge.xcodeproj` en Xcode 16+.
-3. El API key ya está configurado en `APIEndpoint.swift`.
-4. Selecciona un simulador con iOS 17+ y presiona **Run** (`⌘R`).
-
-> No se requiere ninguna configuración adicional ni gestor de dependencias.
 
 ---
 
